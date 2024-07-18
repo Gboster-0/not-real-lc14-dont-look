@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadAgentBeret
+  name: agent beret
+  description: A grey beret that's standard among lobotomy corporation agents.
+  components:
+  - type: Sprite
+    sprite: ~Modular_LC/Clothing/Head/agent_beret.rsi
+  - type: Clothing
+    sprite: ~Modular_LC/Clothing/Head/agent_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadAgentCaptainBeret
+  name: captain beret
+  description: A robust beret for the department captain, for looking stylish while getting mauled by abnormalities.
+  components:
+  - type: Sprite
+    sprite: ~Modular_LC/Clothing/Head/captain_beret.rsi
+  - type: Clothing
+    sprite: ~Modular_LC/Clothing/Head/captain_beret.rsi

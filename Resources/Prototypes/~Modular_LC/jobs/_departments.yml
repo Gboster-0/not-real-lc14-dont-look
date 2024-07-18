@@ -1,0 +1,9 @@
+- type: department
+  id: Lobotomy
+  description: Jobs specific to the LC14 gamemode, you wont see much of any other job other than these
+  color: "#E56321"
+  weight: 1000
+  roles:
+  - AgentCaptain
+  - Agent
+  - AgentIntern

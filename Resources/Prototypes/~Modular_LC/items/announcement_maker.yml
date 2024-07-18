@@ -1,0 +1,19 @@
+- type: entity
+  name: Pocket announcement device
+  parent: BaseItem
+  id: AnnouncementMaker
+  description: A pocket device capable of making announcements for tactical and positional advantage.
+  components:
+  - type: Sprite
+    sprite: ~Modular_LC/Items/announcement_maker.rsi
+    state: icon
+  - type: CommunicationsConsole
+    title: Agent Captain
+    canShuttle: false
+    global: true
+  - type: ActivatableUI
+    key: enum.CommunicationsConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.CommunicationsConsoleUiKey.Key:
+        type: CommunicationsConsoleBoundUserInterface # TODO: Cut down the interface to just announcing, one day. Because god i hate UI's

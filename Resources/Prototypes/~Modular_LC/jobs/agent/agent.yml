@@ -1,0 +1,54 @@
+- type: job
+  parent: AgentIntern
+  id: Agent
+  name: Agent
+  description: Work on abnormalities as an agent working for L-corp. Deal with dangerous breaches as a result of your incompetence
+  playTimeTracker: JobAgent
+  startingGear: AgentGear
+  icon: "JobAgent"
+  supervisors: Agent Captain and the manager
+  access:
+  - Security
+  requirements:
+  - !type:RoleTimeRequirement
+    role: AgentIntern
+    time: 14400 # 4 hours
+
+- type: playTimeTracker
+  id: JobAgent
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobAgent
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Agent
+
+- type: startingGear
+  parent: AgentGearIntern
+  id: AgentGear
+  equipment:
+    head: ClothingHeadAgentBeret
+
+  storage:
+    back:
+    - BoxSurvival
+    - AgentBaton
+    #- InfoPrinter
+
+# Pre-made outfit spawner
+- type: entity
+  name: LobotomyCorp agent
+  id: RandomHumanoidSpawnerLCAgent
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: passenger
+    - type: RandomHumanoidSpawner
+      settings: AgentPreview
+- type: randomHumanoidSettings
+  id: AgentPreview
+  parent: EventHumanoid
+  components:
+    - type: Loadout
+      prototypes: [ AgentGear ]

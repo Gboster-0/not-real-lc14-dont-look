@@ -1,0 +1,57 @@
+- type: job
+  id: AgentIntern
+  name: Agent Intern
+  description: Learn how to work on abnormalities as an agent working for L-corp. Perish to the first abnormality breach.
+  playTimeTracker: JobAgentIntern
+  startingGear: AgentGearIntern
+  icon: "JobAgentIntern"
+  supervisors: Agent Captain and the manager
+  access:
+  - Security
+
+- type: playTimeTracker
+  id: JobAgentIntern
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobAgentIntern
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: AgentIntern
+
+- type: startingGear
+  id: AgentGearIntern
+  equipment:
+    id: PassengerPDA
+    ears: ClothingHeadsetAltNormal
+    eyes: ClothingEyesGlassesSecurity # ClothingEyesGlassesSunglasses
+    jumpsuit: ClothingUniformAgent
+    shoes: ClothingShoesBootsLaceup
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpack
+  storage:
+    back:
+    - BoxSurvival
+    - AgentBaton
+    - PaperAttributes
+    - PaperRiskClasses
+    - PaperDamageTypes
+    - PaperTips
+    #- InfoPrinter
+
+# Pre-made outfit spawner
+- type: entity
+  name: LobotomyCorp agent intern
+  id: RandomHumanoidSpawnerLCAgentIntern
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: passenger
+    - type: RandomHumanoidSpawner
+      settings: AgentInternPreview
+- type: randomHumanoidSettings
+  id: AgentInternPreview
+  parent: EventHumanoid
+  components:
+    - type: Loadout
+      prototypes: [ AgentGearIntern ]

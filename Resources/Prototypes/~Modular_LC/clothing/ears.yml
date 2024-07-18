@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltNormal # because ClothingHeadsetAlt is abstract :(
+  name: bowman headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: ~Modular_LC/Clothing/Ears/bowman_headset.rsi
+  - type: Clothing
+    sprite: ~Modular_LC/Clothing/Ears/bowman_headset.rsi

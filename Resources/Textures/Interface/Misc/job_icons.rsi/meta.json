@@ -9,6 +9,21 @@
     },
     "states": [
         {
+            "name": "Clerk"
+        },
+        {
+            "name": "AgentIntern"
+        },
+        {
+            "name": "Agent"
+        },
+        {
+            "name": "AgentCaptain"
+        },
+        {
+            "name": "Manager"
+        },
+        {
             "name": "Detective"
         },
         {
