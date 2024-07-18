@@ -1,0 +1,36 @@
+# REQUIRES Resources/Locale/en/US/~Modular_LC/tutorial_papers_data.flt
+- type: entity
+  parent: Paper
+  id: PaperAttributes
+  name: How attributes affect your daily life
+  description: 'A piece of certified Lobotomy Corporation information about attributes and their effects.'
+  components:
+    - type: Paper
+      content: text-attributes
+
+- type: entity
+  parent: Paper
+  id: PaperRiskClasses
+  name: Abnormality risk classes and you
+  description: 'A piece of certified Lobotomy Corporation information about the risk classes of abnormalities.'
+  components:
+    - type: Paper
+      content: text-risk-classes
+
+- type: entity
+  parent: Paper
+  id: PaperDamageTypes
+  name: Damage types and how acid affects your body
+  description: 'A piece of certified Lobotomy Corporation information about damage types that abnormalities and EGO deal.'
+  components:
+    - type: Paper
+      content: text-damage-types
+
+- type: entity
+  parent: Paper
+  id: PaperTips
+  name: General lobotomy corporation approved tips for new hires
+  description: 'A piece of certified Lobotomy Corporation information about generally helpfull information.'
+  components:
+    - type: Paper
+      content: text-tips

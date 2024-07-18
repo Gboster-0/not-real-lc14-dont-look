@@ -386,6 +386,8 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
+    - type: BecomesStation
+      id: A-corp
     - type: GridAtmosphere
       version: 2
       data:

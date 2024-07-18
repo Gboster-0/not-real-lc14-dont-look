@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformAgent
+  name: agent uniform
+  description: A tailored black suit, used by company security agents.
+  components:
+  - type: Sprite
+    sprite: ~Modular_LC/Clothing/Uniforms/agent.rsi
+  - type: Clothing
+    sprite: ~Modular_LC/Clothing/Uniforms/agent.rsi

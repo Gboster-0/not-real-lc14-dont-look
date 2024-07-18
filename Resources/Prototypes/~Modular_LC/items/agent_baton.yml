@@ -1,0 +1,25 @@
+- type: entity
+  name: agent baton
+  parent: BaseItem
+  id: AgentBaton
+  description: A cheap weapon for beating Abnormalities or Clerks.
+  components:
+  - type: Sprite
+    sprite: ~Modular_LC/Items/agent_baton.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 12
+    bluntStaminaDamageFactor: 2.0
+    angle: 60
+    animation: WeaponArcSlash
+    soundHit:
+      collection: MetalThud
+  - type: StaminaDamageOnHit
+    damage: 55
+    sound: /Audio/Weapons/genhit1.ogg
+  - type: StaminaDamageOnCollide
+    damage: 55
+    sound: /Audio/Weapons/genhit1.ogg

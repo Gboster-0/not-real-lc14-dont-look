@@ -1,0 +1,57 @@
+- type: job
+  parent: AgentIntern
+  id: AgentCaptain
+  name: Agent Captain
+  description: Work on abnormalities as an agent captain working for L-corp. Be the center of logistics between agents and the manager
+  playTimeTracker: JobAgentCaptain
+  startingGear: AgentCaptainGear
+  icon: "JobAgentCaptain"
+  supervisors: The manager
+  access:
+  - Security
+  requirements:
+  - !type:RoleTimeRequirement
+    role: Agent
+    time: 360000 # 100 hours... pure hell... kirie why
+
+- type: playTimeTracker
+  id: JobAgentCaptain
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobAgentCaptain
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: AgentCaptain
+
+- type: startingGear
+  parent: AgentGearIntern
+  id: AgentCaptainGear
+  equipment:
+    head: ClothingHeadAgentCaptainBeret
+    ears: ClothingHeadsetAltCommand
+    #pocket1: /obj/item/commandprojector
+
+  storage:
+    back:
+    - BoxSurvival
+    - AgentBaton
+    - AnnouncementMaker
+    #- InfoPrinter
+
+# Pre-made outfit spawner
+- type: entity
+  name: LobotomyCorp agent captain
+  id: RandomHumanoidSpawnerLCcaptainAgent
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: passenger
+    - type: RandomHumanoidSpawner
+      settings: AgentCaptainPreview
+- type: randomHumanoidSettings
+  id: AgentCaptainPreview
+  parent: EventHumanoid
+  components:
+    - type: Loadout
+      prototypes: [ AgentCaptainGear ]
